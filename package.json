@@ -1,0 +1,26 @@
+{
+  "name": "bullseye-proxy",
+  "version": "1.0.0",
+  "description": "hot ass proxy ",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hrr40-fec1/bullseye-mcadams-proxy.git"
+  },
+  "keywords": [
+    "react"
+  ],
+  "author": "minmaxdata",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hrr40-fec1/bullseye-mcadams-proxy/issues"
+  },
+  "homepage": "https://github.com/hrr40-fec1/bullseye-mcadams-proxy#readme",
+  "dependencies": {
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0"
+  }
+}
