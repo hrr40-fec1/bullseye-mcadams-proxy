@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/hrr40-fec1/bullseye-mcadams-proxy#readme",
   "dependencies": {
+    "express": "^4.17.1",
     "react": "^16.9.0",
     "react-dom": "^16.9.0"
   }
