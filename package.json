@@ -1,7 +1,7 @@
 {
   "name": "bullseye-proxy",
   "version": "1.0.0",
-  "description": "hot ass proxy ",
+  "description": "hot app proxy ",
   "main": "index.js",
   "scripts": {
     "test": "npm test",
