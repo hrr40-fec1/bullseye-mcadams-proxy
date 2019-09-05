@@ -8,21 +8,12 @@ const app = express();
 app.use(express.static(path.join(__dirname, '/../public')));
 app.get('/', (req, res) => res.send('OK'));
 
-const updateQueryStringParameter = (pth, key, value) => {
-  const re = new RegExp('([?&])' + key + '=.*?(&|$)', 'i');
-  const separator = pth.indexOf('?') !== -1 ? '&' : '?';
-  if (pth.match(re)) {
-    return pth.replace(re, '$1' + key + '=' + value + '$2');
-  }
-  return pth + separator + key + '=' + value;
-};
-
 app.use(proxy('/api/product/', {
   target: 'http://localhost:3004/',
   pathRewrite: (pth, req) => {
-    const id = req.headers.referer.split('?productId=');
-    let newPath = pth;
-    newPath = updateQueryStringParameter(newPath, 'productId', id[1]);
+    const params = req.headers.referer.split('?');
+    const newPath = `${pth}?${params[1]}`;
+    console.log('rewrite path', newPath);
     return newPath;
   },
 }));
